@@ -3,7 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
-import CartWidget from "../CartWidget/CartWidget"
+import CartWidget1 from "../CartWidget1/CartWidget1"
 import Titulo from '../Titulo/Titulo';
 
 import './NavBar.css'
@@ -30,7 +30,7 @@ const NavBar = () => {
                             <Nav.Link href="#link">Contacto</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
-                    <CartWidget />
+                    <CartWidget1 />
                 </Container>
             </Navbar>
         </>

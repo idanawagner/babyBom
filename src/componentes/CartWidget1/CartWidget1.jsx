@@ -2,7 +2,7 @@ import { BsCart3 } from "react-icons/bs";
 import Button from 'react-bootstrap/Button';
 import { useState } from "react";
 
-import './CartWidget.css'
+import './CartWidget1.css'
 
 const CartWidget = () => {
     const [contador, setContador] = useState(0)
