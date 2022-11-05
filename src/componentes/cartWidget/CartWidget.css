@@ -1,0 +1,10 @@
+button {
+    margin: 20px;
+}
+
+.btn-primary {
+    --bs-btn-bg: #e2a85c;
+    --bs-btn-border-color: #ac8c2f;
+    --bs-btn-hover-bg: #ac8c2f;
+    --bs-btn-hover-border-color: #dba35b;
+}

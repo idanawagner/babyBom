@@ -1,14 +1,17 @@
+import './Titulo.css'
 
-function Titulo ( { titulo, subtitulo }) {
+function Titulo({ titulo }) {
     // console.log(props)
     // const {titulo, subtitulo} = props
-     
-    return( 
-        <header className=''>
-            <h2>{titulo}</h2>   
-            <h3>{subtitulo}</h3>
+    return (
+        <header >
+            <h2 className="titulo">{titulo}</h2>
+            <div className='logo'>
+                <img src="../../public/logoBabyBom.png" alt="" />
+            </div>
+
         </header>
     )
-
 }
 export default Titulo
+

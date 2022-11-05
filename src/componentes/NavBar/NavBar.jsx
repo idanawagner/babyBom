@@ -1,35 +1,42 @@
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
 import CartWidget from "../CartWidget/CartWidget"
+import Titulo from '../Titulo/Titulo';
+
+import './NavBar.css'
+
 const NavBar = () => {
     return (
-        
-        <nav className="navbar ">
-            <div className="container">
-                <a className="navbar-brand" href="#"></a>
+        <>
+            <Navbar expand="lg">
+                <Titulo titulo='Baby Bom' />
+                <Container>
+                    {/* <Navbar.Brand href="#home">Inicio</Navbar.Brand> */}
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Collapse id="basic-navbar-nav">
+                        <Nav className="me-auto">
+                            <Nav.Link href="#home">Inicio</Nav.Link>
+                            <NavDropdown title="Productos" id="basic-nav-dropdown">
+                                <NavDropdown.Item href="#action/3.4">Todos los productos</NavDropdown.Item>
+                                <NavDropdown.Divider />
+                                <NavDropdown.Item href="#action/3.1">Mamaderas</NavDropdown.Item>
+                                <NavDropdown.Item href="#action/3.2">Carritos</NavDropdown.Item>
+                                <NavDropdown.Item href="#action/3.3">Playmats</NavDropdown.Item>
+                            </NavDropdown>
+                            <Nav.Link href="#link">Dudas</Nav.Link>
+                            <Nav.Link href="#link">Contacto</Nav.Link>
+                        </Nav>
+                    </Navbar.Collapse>
+                    <CartWidget />
+                </Container>
+            </Navbar>
+        </>
 
-                <div className="nav">
-                    <li className="nav-item">
-                        <a className="nav-link " aria-current="page" href="#">INICIO</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">PRODUCTOS</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">DUDAS</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">CONTACTO</a>
-                    </li>
-                    <li className="nav-item">
-                        <button type="button" className="btn btn-outline-success">
-                            <CartWidget/>
-                        </button>
-                    </li>
-                </div> 
-            </div>
-      </nav>
     )
 }
-  
-  export default NavBar
+
+export default NavBar
 

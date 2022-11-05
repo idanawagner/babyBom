@@ -1,0 +1,5 @@
+.navbar {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: #fff2d6b0;
+}
