@@ -9,7 +9,6 @@ function Titulo({ titulo }) {
             <div className='logo'>
                 <img src="../../public/logoBabyBom.png" alt="" />
             </div>
-
         </header>
     )
 }

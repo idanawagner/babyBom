@@ -2,4 +2,14 @@
     display: grid;
     grid-template-columns: 1fr;
     background-color: #fff2d6b0;
+    
+    
+}
+.navbar-nav {
+    font-weight: 400;
+    --bs-nav-link-padding-y:0rem;
+    --bs-nav-link-color:#e2a85c
+}
+.nav__dropdown{
+    display: grid;
 }
