@@ -1,10 +1,11 @@
 
+import { memo } from 'react';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 
 import './Item.css'
 
-const Item = ({ product }) => {
+const Item = memo(({ product }) => {
 
     return (
         <div>
@@ -18,10 +19,9 @@ const Item = ({ product }) => {
                         </Card.Text>
                     </Card.Body>
                 </Link>
-
             </Card>
         </div>
     )
-}
+})
 
 export default Item
