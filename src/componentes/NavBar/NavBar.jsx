@@ -3,6 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from 'react-router-dom';
+import { useCartContext } from '../../Context/CartContext';
 
 import CartWidget1 from "../CartWidget1/CartWidget1"
 import Titulo from '../Titulo/Titulo';
@@ -10,6 +11,7 @@ import Titulo from '../Titulo/Titulo';
 import './NavBar.css'
 
 const NavBar = () => {
+    const { totalQuantity } = useCartContext()
     return (
         <div>
             <Navbar expand="lg">
@@ -22,12 +24,12 @@ const NavBar = () => {
 
                             <NavDropdown title="Productos" id="basic-nav-dropdown">
                                 <div className='nav__dropdown'>
-                                    <Link to='/categoria/accesoriosAseo'> Accesorios de Baño</Link>
-                                    <Link to='/categoria/cochecitos'> Cochecitos</Link>
-                                    <Link to='/categoria/juguetes'> Juguetes</Link>
-                                    <Link to='/categoria/mochilas'> Mochilas</Link>
-                                    <Link to='/categoria/sillas'> Sillas</Link>
-                                    <Link to='/categoria/vasos'> Vasos</Link>
+                                    <Link to='/category/accesoriosAseo'> Accesorios de Baño</Link>
+                                    <Link to='/category/cochecitos'> Cochecitos</Link>
+                                    <Link to='/category/juguetes'> Juguetes</Link>
+                                    <Link to='/category/mochilas'> Mochilas</Link>
+                                    <Link to='/category/sillas'> Sillas</Link>
+                                    <Link to='/category/vasos'> Vasos</Link>
                                     <NavDropdown.Divider />
                                     <Link to='/'>Todos los productos</Link>
                                 </div>
@@ -39,6 +41,7 @@ const NavBar = () => {
                     </Navbar.Collapse>
                     <Link to='/cart'>
                         <CartWidget1 />
+                        {totalQuantity()}
                     </Link>
                 </Container>
             </Navbar>

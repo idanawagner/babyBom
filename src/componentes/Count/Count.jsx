@@ -4,19 +4,18 @@ import { useState } from "react";
 
 import './Count.css'
 
-const Count = ({ props }) => {
-    const [count, setCount] = useState(1)
+const Count = ({ props , onAdd }) => {
+    const [amount, setAmount] = useState(1)
 
     const add = () => {
-        count < props.stock ? setCount(count + 1) : null
+        amount < props.stock ? setAmount(amount + 1) : null
     }
     const subtract = () => {
-        count == 1 ? null : setCount(count - 1)
+        amount == 1 ? null : setAmount(amount - 1)
     }
     const addAmount = () => {
-        add
+        onAdd(amount)
     }
-
     
     return (
         <div>
@@ -24,13 +23,13 @@ const Count = ({ props }) => {
                 <Button className="m-2" onClick={subtract}>
                     <BsFillPatchMinusFill className="fs-3" />
                 </Button>
-                {count}
+                {amount}
                 <Button className="m-2" onClick={add} >
                     <BsFillPatchPlusFill className="fs-3" />
                 </Button>
             </div>
             <div>
-                <Button className="m-2" onClick={addAmount}>Añadir al carrito</Button>
+                <Button className="m-2" onClick={addAmount} >Añadir al carrito</Button>
             </div>
         </div>
     )
