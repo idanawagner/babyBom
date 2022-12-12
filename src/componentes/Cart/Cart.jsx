@@ -1,25 +1,42 @@
 
 import { Button } from "react-bootstrap"
+import { Link } from "react-router-dom"
 import { useCartContext } from "../../Context/CartContext"
+import Form from "../Form/Form"
 
 
 const Cart = () => {
 
-  const { cartList, deleteCart, deleteProductCart} = useCartContext()
+  const { cartList, deleteCart, deleteProductCart, totalPrice } = useCartContext()
 
   return (
-    <div>
-      <h1>Carrito</h1>
-      <ul>
-        {cartList.map((product) => <li key={product.id}>
-          <img src={product.photo} className="w-25" />
-          Nombre: {product.name} - Precio {product.price} - cantidad: {product.amount}
+    <div className="container m-5">
+      {cartList.length !== 0 ?
+        <>
+          <h2>Carrito</h2>
+          <ul>
+            {cartList.map((product) => <li key={product.id}>
+              <img src={product.photo} className="w-25" />
+              Nombre: {product.name} - Precio {product.price} - cantidad: {product.amount}
 
-          <Button className="m-2" onClick={deleteProductCart} >Eliminar del carrito</Button>
-        </li>
-        )}
-      </ul>
-      <Button onClick={deleteCart}>Vaciar carrito</Button>
+              <Button className="m-2" onClick={() => deleteProductCart(product.id)} >Eliminar del carrito</Button>
+            </li>
+            )}
+          </ul>
+          <label htmlFor="">{totalPrice() !== 0 && totalPrice()}</label>
+          <Button onClick={deleteCart}>Vaciar carrito</Button>
+          <Form ></Form>
+        </>
+        :
+
+        <>
+          <h2>Tu carrito está vacío </h2>
+          <Link to="/">
+            <Button> Ir al inicio </Button>
+          </Link>
+
+        </>
+      }
     </div>
   )
 }

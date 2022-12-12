@@ -1,4 +1,4 @@
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { HashRouter, Navigate, Route, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import NavBar from './componentes/NavBar/NavBar'
@@ -12,7 +12,7 @@ import './App.css'
 
 function App() {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <CartContextProvider>
                 <NavBar />
                 <Routes>
@@ -24,7 +24,7 @@ function App() {
                     <Route path='*' element={<Navigate to='/404NotFound' />} />
                 </Routes>
             </CartContextProvider>
-        </BrowserRouter>
+        </HashRouter>
     )
 }
 export default App

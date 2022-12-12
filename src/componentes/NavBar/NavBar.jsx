@@ -3,7 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from 'react-router-dom';
-import { useCartContext } from '../../Context/CartContext';
+
 
 import CartWidget1 from "../CartWidget1/CartWidget1"
 import Titulo from '../Titulo/Titulo';
@@ -11,7 +11,7 @@ import Titulo from '../Titulo/Titulo';
 import './NavBar.css'
 
 const NavBar = () => {
-    const { totalQuantity } = useCartContext()
+   
     return (
         <div>
             <Navbar expand="lg">
@@ -41,7 +41,6 @@ const NavBar = () => {
                     </Navbar.Collapse>
                     <Link to='/cart'>
                         <CartWidget1 />
-                        {totalQuantity()}
                     </Link>
                 </Container>
             </Navbar>
