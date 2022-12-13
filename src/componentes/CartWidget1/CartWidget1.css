@@ -1,6 +1,5 @@
-.btn .badge {
+.badge {
     font-size: 0.95em;
-    top: 10rem;
-    right: 6.2rem;
-    background-color: #9b867f;
+    margin-top: -1rem;
+    background-color: #a39384;
 }

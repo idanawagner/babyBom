@@ -13,8 +13,13 @@ const Form = () => {
 
     //When the user types in the input field, the value of the input field is set to the value of the state.
     const handleOnChange = (evt) => {
+        evt.target.name === ''|| evt.target.email !== evt.target.repeatEmail || evt.target.phone ===''?
+        alert('Faltan datos')
+        :
+
         setDataForm({
             ...dataForm,
+            
             [evt.target.name]: evt.target.value
         })
     }
@@ -36,16 +41,11 @@ const Form = () => {
                 deleteProductCart()   // A function that is in the context of the cart. It is used to delete the products from the cart.
             
         })
-
-
-
-
     }
     return (
         <>
             {idOrder ?
             <>
-
             <span>Muchas gracias por su compra, su código de orden es: {idOrder}</span>
             </>
             : 
