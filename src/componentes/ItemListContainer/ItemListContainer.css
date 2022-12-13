@@ -4,7 +4,7 @@
     margin: 1rem 3rem;
     padding: 1rem;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr auto;
+    grid-template-columns: 1fr 1fr 1fr auto;
     grid-template-rows: auto;
     font-family: 'Roboto', sans-serif;
     gap: 20px;

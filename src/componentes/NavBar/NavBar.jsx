@@ -23,12 +23,12 @@ const NavBar = () => {
                             <Link to='/'>Inicio</Link>
                             <NavDropdown title="Productos" id="basic-nav-dropdown">
                                 <div className='nav__dropdown'>
-                                    <Link to='/category/accesoriosAseo'> Accesorios de Baño</Link>
-                                    <Link to='/category/cochecitos'> Cochecitos</Link>
-                                    <Link to='/category/juguetes'> Juguetes</Link>
-                                    <Link to='/category/mochilas'> Mochilas</Link>
-                                    <Link to='/category/sillas'> Sillas</Link>
-                                    <Link to='/category/vasos'> Vasos</Link>
+                                    <Link className='m-1' to='/category/accesoriosAseo'> Accesorios de Baño</Link>
+                                    <Link className='m-1' to='/category/cochecitos'> Cochecitos</Link>
+                                    <Link className='m-1' to='/category/juguetes'> Juguetes</Link>
+                                    <Link className='m-1' to='/category/mochilas'> Mochilas</Link>
+                                    <Link className='m-1' to='/category/sillas'> Sillas</Link>
+                                    <Link className='m-1' to='/category/vasos'> Vasos</Link>
                                     <NavDropdown.Divider />
                                     <Link to='/'>Todos los productos</Link>
                                 </div>

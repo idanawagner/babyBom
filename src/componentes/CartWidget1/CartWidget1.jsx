@@ -10,7 +10,6 @@ const CartWidget = () => {
 
     return (
         <div>
-            
             <span className="position-absolute badge rounded-pill">{totalQuantity() !== 0 && totalQuantity()}</span>
             <Button >
                 <BsCart3 className="fs-4" />

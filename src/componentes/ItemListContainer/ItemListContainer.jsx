@@ -28,7 +28,6 @@ const ItemListContainer = () => {
 
     }, [categoryId])
 
-
     return (
         loading
             ?
