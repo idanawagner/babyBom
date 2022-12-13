@@ -2,7 +2,6 @@
 import { Button } from "react-bootstrap"
 import { Link } from "react-router-dom"
 import { useCartContext } from "../../Context/CartContext"
-import Form from "../Form/Form"
 
 
 const Cart = () => {
@@ -25,7 +24,7 @@ const Cart = () => {
           </ul>
           <label htmlFor="">{totalPrice() !== 0 && totalPrice()}</label>
           <Button onClick={deleteCart}>Vaciar carrito</Button>
-          <Form ></Form>
+          <Link to='/checkout'><Button>Finalizar compra</Button></Link>
         </>
         :
 

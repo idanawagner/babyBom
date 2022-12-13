@@ -11,7 +11,7 @@ import Titulo from '../Titulo/Titulo';
 import './NavBar.css'
 
 const NavBar = () => {
-   
+
     return (
         <div>
             <Navbar expand="lg">
@@ -21,7 +21,6 @@ const NavBar = () => {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
                             <Link to='/'>Inicio</Link>
-
                             <NavDropdown title="Productos" id="basic-nav-dropdown">
                                 <div className='nav__dropdown'>
                                     <Link to='/category/accesoriosAseo'> Accesorios de Baño</Link>

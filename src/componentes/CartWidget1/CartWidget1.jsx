@@ -6,12 +6,13 @@ import { useCartContext } from "../../Context/CartContext";
 
 const CartWidget = () => {
     const { totalQuantity } = useCartContext()
+    // The totalQuantity function returns the total quantity of items in the cart.
 
     return (
         <div>
-            <span className="m-3 ">{totalQuantity() !== 0 && totalQuantity()}</span>
             
             <Button >
+            <span className="position-absolute  badge rounded-pill">{totalQuantity() !== 0 && totalQuantity()}</span>
                 <BsCart3 className="fs-4" />
             </Button>
         </div>

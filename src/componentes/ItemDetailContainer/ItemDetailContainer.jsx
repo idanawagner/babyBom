@@ -10,25 +10,23 @@ const ItemDetailContainer = () => {
   const [loading, setLoading] = useState(true)
   const { productId } = useParams()
 
-
- 
+  // A function that is called when the component is mounted and when the productId changes.
   useEffect(() => {
     const db = getFirestore()
     const queryDoc = doc(db, 'productos', productId)
     getDoc(queryDoc)
-    .then(doc => setProduct( { id: doc.id, ...doc.data() } ))
-    .catch(err => console.log(err))
-    .finally(() => setLoading(false))
-    
+      .then(doc => setProduct({ id: doc.id, ...doc.data() }))
+      .catch(err => console.log(err))
+      .finally(() => setLoading(false))
   }, [productId])
 
 
   return (
     loading
       ?
-      <Loading/>
+      <Loading />
       :
-      <ItemDetail product={product}/>
+      <ItemDetail product={product} />
 
   )
 }
